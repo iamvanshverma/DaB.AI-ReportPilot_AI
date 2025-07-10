@@ -1,0 +1,15 @@
+[server]
+headless = true
+port = 8501
+enableCORS = false
+enableXsrfProtection = false
+
+[browser]
+serverAddress = "0.0.0.0"
+gatherUsageStats = false
+
+[runner]
+magicEnabled = false
+
+[client]
+showErrorDetails = false
