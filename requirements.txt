@@ -1,6 +1,6 @@
 streamlit==1.29.0
-pandas>=2.2.3,<2.5
-ydata-profiling==4.6.3
-numpy>=1.24.3,<1.26
+pandas==2.3.1
+numpy==2.3.0
 pdfkit
 python-dotenv
+resend
