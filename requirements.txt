@@ -1,6 +1,6 @@
 streamlit==1.29.0
 pandas==2.3.1
-numpy==2.3.0
+numpy==1.19.3
 pdfkit
 python-dotenv
 resend
