@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import re
 from datetime import datetime, time, timedelta
 import os
 import json
@@ -47,11 +48,7 @@ except ImportError as e:
     logger.error(f"Import error: {e}")
     st.error(f"Failed to load modules: {e}")
 
-# Check environment variables
-REQUIRED_ENV_VARS = ['RESEND_API_KEY', 'GEMINI_API_KEY']
-missing_vars = [var for var in REQUIRED_ENV_VARS if not os.getenv(var)]
-if missing_vars:
-    st.warning(f"Missing environment variables: {', '.join(missing_vars)}")
+
 
 # Page config
 st.set_page_config(
@@ -107,63 +104,50 @@ with tab1:
     col1, col2 = st.columns([1, 2])
     
     with col1:
-        st.markdown("### 🔐 Step 1: Upload Credentials")
+        st.markdown("### 🔐 Step 1: Your Google Spreadsheet URL")
         
-        uploaded_file = st.file_uploader(
-            "Upload Google Service Account JSON",
-            type=['json'],
-            help="Upload your service account key file"
-        )
-        
-        if uploaded_file:
-            try:
-                creds = json.load(uploaded_file)
-                
-                # Validate credentials
-                if 'client_email' in creds and 'private_key' in creds:
-                    st.success(f"✅ Credentials loaded!")
-                    st.info(f"Service Account: `{creds['client_email']}`")
-                    
-                    # Initialize connector with error handling
-                    try:
-                        st.session_state.google_connector = GoogleSheetsConnector(creds)
-                        st.session_state.creds = creds
-                    except Exception as e:
-                        st.error(f"Failed to initialize Google Sheets: {e}")
-                else:
-                    st.error("❌ Invalid credentials file")
-            except Exception as e:
-                st.error(f"Error loading credentials: {str(e)}")
     
     with col2:
-        st.markdown("### 📄 Step 2: Connect Sheet")
-        
-        if st.session_state.google_connector:
-            st.info(f"""
-            ⚠️ **Important**: Share your sheet with:
-            `{st.session_state.creds.get('client_email')}`
-            """)
-            
-            sheet_url = st.text_input(
-                "Google Sheet URL",
-                placeholder="https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit"
-            )
-            
-            if st.button("🔗 Connect to Sheet", type="primary"):
-                if sheet_url:
-                    try:
-                        with st.spinner("Connecting..."):
-                            data = st.session_state.google_connector.connect(sheet_url)
-                            st.session_state.data = data
-                            st.session_state.sheet_url = sheet_url
-                            st.success(f"✅ Connected! Loaded {len(data)} rows")
-                    except Exception as e:
-                        st.error(f"Connection failed: {str(e)}")
-                        if "403" in str(e) or "PERMISSION_DENIED" in str(e):
-                            st.error("Please make sure you've shared the sheet with the service account email!")
-        else:
-            st.warning("⚠️ Please upload credentials first")
+        st.markdown("### 📄 Step 2: Allow us to fetch data")
+
     
+    # ————— New OAuth flow —————
+    with st.expander("🔓 Login with Google (OAuth) to fetch private sheet", expanded=False):
+         oauth_url = st.text_input("Google Sheet URL", placeholder="https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit")
+    if st.button("🔐 Connect via Google Login", key="oauth_connect"):
+        from google_auth import get_gsheet_service
+        service = get_gsheet_service()
+
+        match = re.search(r"/spreadsheets/d/([a-zA-Z0-9-_]+)", oauth_url)
+        if not match:
+            st.error("❌ Invalid Google Sheet URL")
+        else:
+            sheet_id = match.group(1)
+
+            # 1) Get first worksheet name dynamically
+            meta = service.spreadsheets().get(
+                spreadsheetId=sheet_id,
+                fields="sheets(properties(title))"
+            ).execute()
+            first_sheet = meta["sheets"][0]["properties"]["title"]
+
+            # 2) Fetch all values from that sheet
+            result = service.spreadsheets().values().get(
+                spreadsheetId=sheet_id,
+                range=f"'{first_sheet}'"
+            ).execute()
+            rows = result.get("values", [])
+
+            if not rows:
+                st.error("❌ No data found in sheet")
+            else:
+                df = pd.DataFrame(rows[1:], columns=rows[0])
+                st.session_state.data = df
+                st.session_state.sheet_url = oauth_url
+                st.success(f"✅ OAuth connected! {len(df)} rows loaded.")
+
+    # ——————————————————————
+
     # Data Preview & Analysis
     if st.session_state.data is not None:
         st.markdown("---")
@@ -220,6 +204,9 @@ with tab1:
 
 # Tab 2: Send Report
 with tab2:
+    st.write("🔑 RESEND_API_KEY:", os.getenv("RESEND_API_KEY"))
+    st.write("✉️ RESEND_FROM_EMAIL:", os.getenv("RESEND_FROM_EMAIL"))
+    st.write("👤 RESEND_FROM_NAME:", os.getenv("RESEND_FROM_NAME"))
     st.header("📧 Send Analysis Report")
     
     if st.session_state.data is None:
@@ -288,7 +275,8 @@ with tab2:
                             ai_insights=ai_insights,
                             charts=charts
                         )
-                        
+
+
                         # Send email
                         email_sender = EmailSender()
                         success = email_sender.send_report(
@@ -297,12 +285,12 @@ with tab2:
                             report_name=report_name,
                             language=language
                         )
-                        
                         if success:
                             st.success(f"✅ Report sent to {recipient}!")
                             st.balloons()
                         else:
-                            st.error("❌ Failed to send report")
+                            st.error("❌ Failed to send report via SMTP")
+
                     
                     except Exception as e:
                         st.error(f"Error: {str(e)}")
@@ -473,7 +461,7 @@ st.markdown("---")
 st.markdown(
     """
     <div style='text-align: center; color: #666;'>
-        Built with ❤️ by Mayank Paradkar | Powered by Gemini AI
+        Built with Hustle and ❤️ by Vansh Verma | Powered by Gemini AI
     </div>
     """,
     unsafe_allow_html=True

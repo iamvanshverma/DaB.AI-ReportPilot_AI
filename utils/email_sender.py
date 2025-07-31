@@ -1,66 +1,43 @@
 import os
-import requests
-import base64
-from datetime import datetime
+import smtplib
+from email.message import EmailMessage
 import logging
-from dotenv import load_dotenv
-import json
 
-load_dotenv()
 logger = logging.getLogger(__name__)
 
 class EmailSender:
     def __init__(self):
-        self.api_key = os.getenv('RESEND_API_KEY')
-        self.from_email = os.getenv('RESEND_FROM_EMAIL')
-        self.from_name = os.getenv('RESEND_FROM_NAME')
-    
+        self.smtp_user = os.getenv("SMTP_USER")
+        self.smtp_pass = os.getenv("SMTP_PASS")
+
     def send_report(self, recipient_email, report_content, report_name, language):
-        """Send report via email"""
-        try:
-            # Create safe subject without unicode characters
-            date_str = datetime.now().strftime('%Y-%m-%d')
-            subject = f"Data Analysis Report - {report_name} - {date_str}"
-            
-            # Prepare attachments
-            attachments = []
-            if 'pdf' in report_content:
-                pdf_base64 = base64.b64encode(report_content['pdf']).decode('utf-8')
-                attachments.append({
-                    "filename": f"report_{datetime.now().strftime('%Y%m%d')}_{language}.pdf",
-                    "content": pdf_base64,
-                    "type": "application/pdf"
-                })
-            
-            # Email data with proper encoding
-            email_data = {
-                "from": f"{self.from_name} <{self.from_email}>",
-                "to": [recipient_email],
-                "subject": subject,
-                "html": report_content.get('html', '<p>Please find attached report.</p>'),
-                "attachments": attachments
-            }
-            
-            # Send via Resend
-            headers = {
-                "Authorization": f"Bearer {self.api_key}",
-                "Content-Type": "application/json"
-            }
-            
-            response = requests.post(
-                "https://api.resend.com/emails",
-                json=email_data,
-                headers=headers,
-                timeout=30
+        # Build the message
+        msg = EmailMessage()
+        msg["Subject"] = f"{report_name} ({language.upper()})"
+        msg["From"]    = self.smtp_user
+        msg["To"]      = recipient_email
+        html = report_content.get("html", "<p>Please find attached the report.</p>")
+        msg.set_content("Please view this report in an HTML‑capable client.")
+        msg.add_alternative(html, subtype="html")
+
+        # Attach PDF if present
+        pdf_bytes = report_content.get("pdf")
+        if pdf_bytes:
+            msg.add_attachment(
+                pdf_bytes,
+                maintype="application",
+                subtype="pdf",
+                filename=f"{report_name}.pdf"
             )
-            
-            if response.status_code == 200:
-                logger.info(f"Email sent successfully to {recipient_email}")
-                return True
-            else:
-                logger.error(f"Failed to send email: {response.text}")
-                return False
-                
+
+        # Send over SSL
+        try:
+            with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+                smtp.ehlo()
+                smtp.login(self.smtp_user, self.smtp_pass)
+                smtp.send_message(msg)
+            logger.info(f"Email sent successfully to {recipient_email}")
+            return True
         except Exception as e:
-            logger.error(f"Email error: {str(e)}")
+            logger.error(f"SMTP send error: {e}", exc_info=True)
             return False

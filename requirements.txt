@@ -1,6 +1,36 @@
-streamlit==1.29.0
-pandas==2.2.2
-numpy>=1.26.0
-pdfkit
-python-dotenv
-resend
+# core framework
+streamlit==1.29.0          # already tested OK
+
+# data & viz stack
+pandas==2.2.1
+numpy>=1.26,<2.0
+matplotlib>=3.8
+seaborn>=0.13
+
+# Google / Gemini
+google-generativeai>=0.4
+google-auth>=2.40
+google-auth-oauthlib>=1.2
+
+# Google OAuth + Sheets API
+google-auth-httplib2>=0.1.0
+google-api-python-client>=2.70.0
+
+# Sheets & translations
+gspread>=6.0
+googletrans==4.0.0-rc1     # stable unofficial client
+
+# scheduling / background jobs
+apscheduler>=3.10
+
+# PDF & reporting
+pdfkit>=1.0
+reportlab>=4.0
+
+# ORM / DB (seen in code)
+sqlalchemy>=2.0
+
+# misc utilities
+python-dotenv>=1.0
+requests>=2.32
+pillow>=10.0      

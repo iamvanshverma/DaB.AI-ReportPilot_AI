@@ -30,22 +30,39 @@ class JobScheduler:
                     'data': initial_data.to_dict() if initial_data is not None else None
                 }, f)
             
-            # Create trigger
-            frequency = schedule_params['frequency']
-            
-            if frequency == 'hourly':
-                trigger = IntervalTrigger(hours=1)
-            elif frequency == 'daily':
+            # Create trigger based on our `type` + params
+            t_type = schedule_params.get('type')
+            if t_type == 'interval':
+                # minute‑ or hour‑based intervals
+                if 'minutes' in schedule_params:
+                    trigger = IntervalTrigger(minutes=schedule_params['minutes'])
+                elif 'hours' in schedule_params:
+                    trigger = IntervalTrigger(hours=schedule_params['hours'])
+                else:
+                    raise ValueError("Interval trigger missing minutes/hours")
+
+            elif t_type == 'daily':
                 trigger = CronTrigger(
                     hour=schedule_params.get('hour', 9),
                     minute=schedule_params.get('minute', 0)
                 )
-            elif frequency == 'weekly':
+
+            elif t_type == 'weekly':
                 trigger = CronTrigger(
                     day_of_week=schedule_params.get('day', 'mon'),
                     hour=schedule_params.get('hour', 9),
                     minute=schedule_params.get('minute', 0)
                 )
+
+            else:
+                # Fallback: run immediately once
+                from datetime import datetime
+                now = datetime.now()
+                trigger = CronTrigger(
+                    year=now.year, month=now.month, day=now.day,
+                    hour=now.hour, minute=now.minute
+                )
+
             
             # Add job
             self.scheduler.add_job(

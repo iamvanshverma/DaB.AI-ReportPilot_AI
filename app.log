@@ -1,0 +1,278 @@
+2025-07-12 14:09:24,711 - __main__ - ERROR - Import error: No module named 'gspread'
+2025-07-12 14:27:52,643 - __main__ - ERROR - Import error: No module named 'google.generativeai'
+2025-07-12 14:31:31,292 - __main__ - ERROR - Import error: No module named 'matplotlib'
+2025-07-12 15:24:15,931 - matplotlib.font_manager - WARNING - Matplotlib is building the font cache; this may take a moment.
+2025-07-12 15:24:16,608 - matplotlib.font_manager - INFO - generated new fontManager
+2025-07-12 15:24:20,257 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-12 15:26:32,656 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-12 17:19:23,135 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-12 21:33:39,498 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-13 12:46:51,390 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-13 17:25:59,382 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-13 17:37:02,856 - google_auth_oauthlib.flow - INFO - "GET /?state=RdFUzlRCOgex1EFDbJB0oc1BR2EfGx&code=4/0AVMBsJjq_QdCiFHW5HWXqI2jLQTxtjdqau38BEqANZ5o3MDsmoq5Nq_DIXwmiimBPj16dw&scope=https://www.googleapis.com/auth/spreadsheets.readonly HTTP/1.1" 200 65
+2025-07-13 17:37:03,840 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 17:37:20,677 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 17:37:21,774 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 17:37:25,081 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 17:37:26,098 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 17:37:26,464 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 17:37:26,870 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 17:37:27,588 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 17:37:52,564 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-13 17:38:01,654 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 17:46:25,392 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-13 17:46:45,086 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 17:48:19,120 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-13 17:48:32,903 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 19:01:30,605 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-13 21:22:33,986 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-13 21:23:01,370 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 21:32:54,740 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-13 21:33:55,203 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 21:33:56,915 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 21:33:57,625 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 21:33:59,033 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 21:34:00,167 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 21:34:00,964 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 21:34:04,004 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-13 21:34:16,997 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 21:35:52,388 - utils.email_sender - ERROR - Failed to send email: {"statusCode":422,"message":"Invalid `from` field. The email address needs to follow the `email@example.com` or `Name <email@example.com>` format.","name":"validation_error"}
+2025-07-14 01:43:43,208 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-14 01:44:38,504 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-14 01:44:44,019 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 01:45:13,235 - utils.email_sender - ERROR - Failed to send email: {"statusCode":422,"message":"Invalid `from` field. The email address needs to follow the `email@example.com` or `Name <email@example.com>` format.","name":"validation_error"}
+2025-07-14 01:49:43,817 - utils.email_sender - ERROR - Failed to send email: {"statusCode":422,"message":"Invalid `from` field. The email address needs to follow the `email@example.com` or `Name <email@example.com>` format.","name":"validation_error"}
+2025-07-14 01:50:11,446 - utils.email_sender - ERROR - Failed to send email: {"statusCode":422,"message":"Invalid `from` field. The email address needs to follow the `email@example.com` or `Name <email@example.com>` format.","name":"validation_error"}
+2025-07-14 02:02:39,401 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-14 02:03:15,543 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-14 02:10:51,022 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-14 02:10:56,580 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 02:11:22,602 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-14 02:11:41,445 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 02:12:08,623 - utils.email_sender - ERROR - Failed to send email: {"statusCode":422,"message":"Invalid `from` field. The email address needs to follow the `email@example.com` or `Name <email@example.com>` format.","name":"validation_error"}
+2025-07-14 02:12:32,863 - utils.email_sender - ERROR - Failed to send email: {"statusCode":422,"message":"Invalid `from` field. The email address needs to follow the `email@example.com` or `Name <email@example.com>` format.","name":"validation_error"}
+2025-07-14 02:13:40,972 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-14 02:14:03,114 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 02:14:34,039 - utils.email_sender - ERROR - Failed to send email: {"statusCode":422,"message":"Invalid `from` field. The email address needs to follow the `email@example.com` or `Name <email@example.com>` format.","name":"validation_error"}
+2025-07-14 15:09:43,716 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-14 16:22:55,551 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-14 16:23:32,741 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 16:24:01,954 - utils.email_sender - ERROR - Email error: Resend API error 422: {"statusCode":422,"message":"Invalid `from` field. The email address needs to follow the `email@example.com` or `Name <email@example.com>` format.","name":"validation_error"}
+2025-07-14 16:29:56,883 - utils.email_sender - ERROR - Email error: Resend API error 422: {"statusCode":422,"message":"Invalid `from` field. The email address needs to follow the `email@example.com` or `Name <email@example.com>` format.","name":"validation_error"}
+2025-07-14 17:45:18,062 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-14 17:47:29,983 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 17:47:52,799 - utils.email_sender - ERROR - Email error: Resend API error 422: {"statusCode":422,"message":"Invalid `from` field. The email address needs to follow the `email@example.com` or `Name <email@example.com>` format.","name":"validation_error"}
+2025-07-14 17:52:30,295 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-14 17:53:08,601 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 18:01:32,785 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-14 18:01:58,078 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 18:12:03,470 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-14 18:12:17,975 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-14 18:12:58,698 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 18:13:01,466 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 18:13:02,006 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 18:13:38,330 - __main__ - ERROR - Report error: name 'success' is not defined
+Traceback (most recent call last):
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\app.py", line 350, in <module>
+    if success:
+       ^^^^^^^
+NameError: name 'success' is not defined
+2025-07-14 20:58:05,637 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-14 22:21:25,678 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-15 00:34:48,592 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-15 13:12:53,009 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-15 17:12:31,951 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-15 18:08:06,907 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-15 18:31:44,023 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-15 18:39:40,866 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-15 18:59:50,550 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-16 12:50:37,554 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-16 18:28:15,917 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-16 19:17:30,844 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-19 15:16:59,623 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-19 15:23:24,231 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-19 20:16:42,697 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-19 21:50:58,955 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-20 13:46:31,372 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-20 14:07:05,774 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-20 15:49:16,260 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-20 16:14:31,539 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-20 22:10:29,709 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-21 01:37:10,918 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-21 09:24:47,501 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-21 10:11:36,072 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-21 10:12:56,076 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-21 10:13:42,413 - utils.email_sender - ERROR - SMTP send error: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-23e3b6cfb7dsm49026905ad.140 - gsmtp')
+Traceback (most recent call last):
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\utils\email_sender.py", line 53, in send_report
+    smtp.login(self.smtp_user, self.smtp_pass)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-23e3b6cfb7dsm49026905ad.140 - gsmtp')
+2025-07-21 10:13:42,434 - __main__ - ERROR - Report error: cannot unpack non-iterable bool object
+Traceback (most recent call last):
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\app.py", line 336, in <module>
+    code, body = email_sender.send_report(
+    ^^^^^^^^^^
+TypeError: cannot unpack non-iterable bool object
+2025-07-21 10:19:06,210 - utils.email_sender - ERROR - SMTP send error: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-23e3b6b598bsm49047855ad.97 - gsmtp')
+Traceback (most recent call last):
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\utils\email_sender.py", line 53, in send_report
+    smtp.login(self.smtp_user, self.smtp_pass)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-23e3b6b598bsm49047855ad.97 - gsmtp')
+2025-07-21 20:05:00,914 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-21 20:12:15,456 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-21 20:47:22,107 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-21 22:18:50,763 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-21 22:19:14,504 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-21 22:19:17,624 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-21 22:20:21,610 - utils.email_sender - ERROR - SMTP send error: Connection unexpectedly closed
+Traceback (most recent call last):
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\utils\email_sender.py", line 53, in send_report
+    smtp.login(self.smtp_user, self.smtp_pass)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 642, in auth
+    (code, resp) = self.docmd("AUTH", mechanism + " " + response)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 432, in docmd
+    return self.getreply()
+           ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 405, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+2025-07-21 22:26:10,471 - utils.email_sender - ERROR - SMTP send error: Connection unexpectedly closed
+Traceback (most recent call last):
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\utils\email_sender.py", line 53, in send_report
+    smtp.login(self.smtp_user, self.smtp_pass)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 642, in auth
+    (code, resp) = self.docmd("AUTH", mechanism + " " + response)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 432, in docmd
+    return self.getreply()
+           ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 405, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+2025-07-21 22:26:49,895 - utils.email_sender - ERROR - SMTP send error: Connection unexpectedly closed
+Traceback (most recent call last):
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\utils\email_sender.py", line 53, in send_report
+    smtp.login(self.smtp_user, self.smtp_pass)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 642, in auth
+    (code, resp) = self.docmd("AUTH", mechanism + " " + response)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 432, in docmd
+    return self.getreply()
+           ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 405, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+2025-07-21 22:33:21,525 - utils.email_sender - ERROR - SMTP send error: Connection unexpectedly closed
+Traceback (most recent call last):
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\utils\email_sender.py", line 53, in send_report
+    smtp.login(self.smtp_user, self.smtp_pass)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 642, in auth
+    (code, resp) = self.docmd("AUTH", mechanism + " " + response)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 432, in docmd
+    return self.getreply()
+           ^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 405, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+2025-07-22 10:25:09,950 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-22 10:25:48,445 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-22 10:26:00,798 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-22 10:26:36,946 - utils.email_sender - INFO - Email sent successfully to vanshverma2015@gmail.com
+2025-07-22 11:50:31,841 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-22 12:20:44,737 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-22 14:52:07,036 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-22 15:21:49,741 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-22 15:22:41,887 - scheduler.job_scheduler - ERROR - Failed to schedule job: cannot access local variable 'trigger' where it is not associated with a value
+2025-07-22 17:35:22,844 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-22 18:44:56,063 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-22 19:13:59,154 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-22 21:02:00,886 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-23 07:53:54,696 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-23 14:05:17,847 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-23 17:18:31,966 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-23 19:11:20,880 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-23 23:10:25,012 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-24 11:50:12,619 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-24 16:49:36,334 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-24 17:14:24,951 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-28 23:08:25,084 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-28 23:17:57,308 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-28 23:18:00,860 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-28 23:18:23,380 - __main__ - ERROR - Report error: `st.download_button()` can't be used in an `st.form()`.
+
+For more information, refer to the
+[documentation for forms](https://docs.streamlit.io/library/api-reference/control-flow/st.form).
+Traceback (most recent call last):
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\app.py", line 335, in <module>
+    st.download_button(
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\venv\Lib\site-packages\streamlit\runtime\metrics_util.py", line 396, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\venv\Lib\site-packages\streamlit\elements\widgets\button.py", line 325, in download_button
+    return self._download_button(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\venv\Lib\site-packages\streamlit\elements\widgets\button.py", line 458, in _download_button
+    raise StreamlitAPIException(
+streamlit.errors.StreamlitAPIException: `st.download_button()` can't be used in an `st.form()`.
+
+For more information, refer to the
+[documentation for forms](https://docs.streamlit.io/library/api-reference/control-flow/st.form).
+
+2025-07-29 00:55:58,777 - utils.email_sender - INFO - Email sent successfully to vanshverma2015@gmail.com
+2025-07-29 01:04:34,310 - scheduler.job_scheduler - ERROR - Failed to schedule job: cannot access local variable 'trigger' where it is not associated with a value
+2025-07-29 01:30:22,502 - scheduler.job_scheduler - ERROR - Failed to schedule job: cannot access local variable 'trigger' where it is not associated with a value
+2025-07-29 01:30:30,112 - scheduler.job_scheduler - ERROR - Failed to schedule job: cannot access local variable 'trigger' where it is not associated with a value
+2025-07-29 01:30:37,162 - scheduler.job_scheduler - ERROR - Failed to schedule job: cannot access local variable 'trigger' where it is not associated with a value
+2025-07-29 01:30:45,793 - scheduler.job_scheduler - ERROR - Failed to schedule job: cannot access local variable 'trigger' where it is not associated with a value
+2025-07-29 01:30:47,164 - scheduler.job_scheduler - ERROR - Failed to schedule job: cannot access local variable 'trigger' where it is not associated with a value
+2025-07-29 01:30:50,513 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-29 01:30:56,882 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-29 01:31:47,926 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-29 01:32:00,721 - apscheduler.scheduler - INFO - Added job "JobScheduler._execute_job" to job store "default"
+2025-07-29 01:32:00,723 - scheduler.job_scheduler - INFO - Job scheduled: 8e79618e
+2025-07-29 01:33:00,733 - apscheduler.executors.default - INFO - Running job "JobScheduler._execute_job (trigger: interval[0:01:00], next run at: 2025-07-29 01:34:00 IST)" (scheduled at 2025-07-29 01:33:00.721691+05:30)
+2025-07-29 01:33:00,740 - connectors.google_sheets - ERROR - Authentication attempt 1 failed: Service account info was not in the expected format, missing fields token_uri, client_email.
+2025-07-29 01:33:01,742 - connectors.google_sheets - ERROR - Authentication attempt 2 failed: Service account info was not in the expected format, missing fields token_uri, client_email.
+2025-07-29 01:33:02,259 - connectors.google_sheets - ERROR - Authentication attempt 1 failed: Service account info was not in the expected format, missing fields token_uri, client_email.
+2025-07-29 01:33:03,260 - connectors.google_sheets - ERROR - Authentication attempt 2 failed: Service account info was not in the expected format, missing fields token_uri, client_email.
+2025-07-29 01:33:03,743 - connectors.google_sheets - ERROR - Authentication attempt 3 failed: Service account info was not in the expected format, missing fields token_uri, client_email.
+2025-07-29 01:33:03,743 - scheduler.job_scheduler - ERROR - Job execution failed: Failed to authenticate after 3 attempts: Service account info was not in the expected format, missing fields token_uri, client_email.
+2025-07-29 01:33:03,745 - apscheduler.executors.default - INFO - Job "JobScheduler._execute_job (trigger: interval[0:01:00], next run at: 2025-07-29 01:34:00 IST)" executed successfully
+2025-07-29 01:33:05,261 - connectors.google_sheets - ERROR - Authentication attempt 3 failed: Service account info was not in the expected format, missing fields token_uri, client_email.
+2025-07-29 01:33:05,261 - scheduler.job_scheduler - ERROR - Job execution failed: Failed to authenticate after 3 attempts: Service account info was not in the expected format, missing fields token_uri, client_email.
+2025-07-29 01:33:58,241 - apscheduler.scheduler - INFO - Removed job 8e79618e
+2025-07-29 02:42:31,183 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-29 12:54:38,170 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-29 13:15:43,746 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-29 13:27:22,235 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-31 08:54:53,935 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-31 08:58:01,009 - apscheduler.scheduler - INFO - Scheduler started
+2025-07-31 08:58:58,404 - apscheduler.scheduler - INFO - Scheduler started
