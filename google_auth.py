@@ -23,9 +23,10 @@ def get_gsheet_service():
         else:
             # — Read your OAuth client JSON from Streamlit secrets —
             client_config = st.secrets["google_oauth"]
-            temp_file = "temp_oauth.json"
+            payload = {"installed": dict(client_config)}
+            
             with open(temp_file, "w") as f:
-                json.dump(dict(client_config), f)
+                json.dump(payload, f)
 
             flow = InstalledAppFlow.from_client_secrets_file(temp_file, SCOPES)
             creds = flow.run_local_server(port=0)
