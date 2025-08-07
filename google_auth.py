@@ -1,22 +1,41 @@
 import streamlit as st
-from google.oauth2.service_account import Credentials
+import os, pickle, json
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 
-# Only Sheets-readonly scope is needed
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+TOKEN_PATH = 'token.pickle'
+TEMP_OAUTH = 'temp_oauth.json'
 
 def get_gsheet_service():
-    """
-    Creates and returns a Google Sheets v4 service object
-    using a service-account JSON stored in Streamlit secrets.
-    """
-    # 1) Read the entire service-account JSON dict from secrets
-    sa_info = st.secrets["gcp_service_account"]
+    creds = None
 
-    # 2) Build Credentials object
-    creds = Credentials.from_service_account_info(sa_info, scopes=SCOPES)
+    # Token load karo agar hai
+    if os.path.exists(TOKEN_PATH):
+        with open(TOKEN_PATH, 'rb') as f:
+            creds = pickle.load(f)
 
-    # 3) Build & return the Sheets service
-    service = build('sheets', 'v4', credentials=creds)
-    return service
+    # Valid nahi hai toh naya OAuth flow chalao
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            cfg = st.secrets["google_oauth"]
 
+            with open(TEMP_OAUTH, 'w') as f:
+                json.dump({"web": dict(cfg)}, f)
+
+            flow = InstalledAppFlow.from_client_secrets_file(TEMP_OAUTH, SCOPES)
+            creds = flow.run_local_server(
+                host="0.0.0.0",
+                port=8501,
+                open_browser=True  # Streamlit Cloud ignores this
+            )
+
+            os.remove(TEMP_OAUTH)
+
+        with open(TOKEN_PATH, 'wb') as f:
+            pickle.dump(creds, f)
+
+    return build('sheets', 'v4', credentials=creds)
