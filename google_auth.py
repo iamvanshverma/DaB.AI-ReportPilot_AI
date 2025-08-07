@@ -1,46 +1,45 @@
 import streamlit as st
-import json
-import os
-import pickle
+import json, os, pickle
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+TOKEN_PATH = 'token.pickle'
+TEMP_OAUTH = 'temp_oauth.json'
 
 def get_gsheet_service():
     creds = None
-    token_path = 'token.pickle'
-    
-    # 1) Load existing token
-    if os.path.exists(token_path):
-        with open(token_path, 'rb') as token_file:
-            creds = pickle.load(token_file)
+    # 1) Pehle token cache dekh
+    if os.path.exists(TOKEN_PATH):
+        with open(TOKEN_PATH, 'rb') as f:
+            creds = pickle.load(f)
 
-    # 2) If no valid creds, do OAuth flow
+    # 2) Agar valid nahi hai, toh naya OAuth flow chala
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            # Read your OAuth client config from Streamlit secrets
-            client_config = st.secrets["google_oauth"]
-            
-            # Write a temp file that includes the "installed" wrapper
-            temp_path = "temp_oauth.json"
-            payload = {"installed": dict(client_config)}
-            with open(temp_path, "w") as f:
-                json.dump(payload, f)
-            
-            # Run the desktop-app OAuth flow
-            flow = InstalledAppFlow.from_client_secrets_file(temp_path, SCOPES)
-            creds = flow.run_local_server(port=0)
-            
-            # Clean up
-            os.remove(temp_path)
+            # Secrets se client config lo
+            cfg = st.secrets["google_oauth"]
+            with open(TEMP_OAUTH, 'w') as f:
+                json.dump({"installed": dict(cfg)}, f)
 
-        # Cache the credentials for next time
-        with open(token_path, 'wb') as token_file:
-            pickle.dump(creds, token_file)
+            flow = InstalledAppFlow.from_client_secrets_file(TEMP_OAUTH, SCOPES)
+            # Browser open nahi, redirect URI pe hi handle karega
+            creds = flow.run_local_server(
+                host="0.0.0.0",
+                port=8501,
+                authorization_prompt_message="Apna browser mein jaake allow karo: {url}",
+                open_browser=False
+            )
 
-    # 3) Build and return the Sheets service
+            os.remove(TEMP_OAUTH)
+
+        # 3) Naya token cache karo
+        with open(TOKEN_PATH, 'wb') as f:
+            pickle.dump(creds, f)
+
+    # 4) Sheets service build karke return karo
     return build('sheets', 'v4', credentials=creds)
+
