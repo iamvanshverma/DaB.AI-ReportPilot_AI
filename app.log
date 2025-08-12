@@ -285,3 +285,62 @@ For more information, refer to the
 2025-08-07 20:55:59,180 - apscheduler.scheduler - INFO - Scheduler started
 2025-08-07 21:43:27,861 - apscheduler.scheduler - INFO - Scheduler started
 2025-08-07 22:02:58,365 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-11 22:41:57,515 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-11 22:42:20,929 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-08-11 22:42:56,724 - utils.email_sender - INFO - Email sent successfully to vanshverma2015@gmail.com
+2025-08-11 23:36:23,458 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-12 00:37:03,460 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-12 01:50:16,483 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-12 11:04:06,398 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-12 11:08:59,557 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-12 11:12:05,451 - __main__ - ERROR - Google auth error
+Traceback (most recent call last):
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\app.py", line 147, in <module>
+    auth_url, state = create_auth_url(APP_BASE_URL)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\google_auth.py", line 46, in create_auth_url
+    flow = Flow.from_client_secrets_file(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 198, in from_client_secrets_file
+    with open(client_secrets_file, "r") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/client_secret.json'
+2025-08-12 11:14:18,748 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-12 11:14:31,574 - __main__ - ERROR - Google auth error
+Traceback (most recent call last):
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\app.py", line 147, in <module>
+    auth_url, state = create_auth_url(APP_BASE_URL)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\google_auth.py", line 46, in create_auth_url
+    flow = Flow.from_client_secrets_file(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 198, in from_client_secrets_file
+    with open(client_secrets_file, "r") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/client_secret.json'
+2025-08-12 11:14:40,097 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-12 11:14:51,636 - __main__ - ERROR - Google auth error
+Traceback (most recent call last):
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\app.py", line 147, in <module>
+    auth_url, state = create_auth_url(APP_BASE_URL)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\google_auth.py", line 46, in create_auth_url
+    flow = Flow.from_client_secrets_file(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 198, in from_client_secrets_file
+    with open(client_secrets_file, "r") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/client_secret.json'
+2025-08-12 11:15:59,375 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-12 11:16:13,622 - __main__ - ERROR - Google auth error
+Traceback (most recent call last):
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\app.py", line 147, in <module>
+    auth_url, state = create_auth_url(APP_BASE_URL)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\google_auth.py", line 46, in create_auth_url
+    flow = Flow.from_client_secrets_file(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\success data retreived\Projects\new email analyzeer\automation_email3\venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 198, in from_client_secrets_file
+    with open(client_secrets_file, "r") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/client_secret.json'

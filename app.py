@@ -7,6 +7,9 @@ import json
 import logging
 
 from dotenv import load_dotenv
+APP_BASE_URL = os.getenv("APP_BASE_URL", "")
+from google_auth import create_auth_url, finish_oauth_and_get_service, get_service_for_email
+
 import sys
 import traceback
 
@@ -113,39 +116,85 @@ with tab1:
 
     
     # ————— New OAuth flow —————
-    with st.expander("🔓 Login with Google (OAuth) to fetch private sheet", expanded=False):
-         oauth_url = st.text_input("Google Sheet URL", placeholder="https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit")
-    if st.button("🔐 Connect via Google Login", key="oauth_connect"):
-        from google_auth import get_gsheet_service
-        service = get_gsheet_service()
+# ————— OAuth web-flow (Render-ready) —————
+# Sheet URL input (keep same UX)
+oauth_url = st.text_input("Google Sheet URL", placeholder="https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit")
 
-        match = re.search(r"/spreadsheets/d/([a-zA-Z0-9-_]+)", oauth_url)
-        if not match:
-            st.error("❌ Invalid Google Sheet URL")
+# 1) If Google redirected back with code/state, finish the OAuth exchange
+query_params = st.experimental_get_query_params()
+if ("code" in query_params) or ("state" in query_params):
+    try:
+        email, service_obj, creds_json = finish_oauth_and_get_service(query_params, APP_BASE_URL)
+        st.session_state["oauth_user_email"] = email
+        st.session_state["service_ready_for"] = email
+        st.success(f"✅ OAuth completed for {email}")
+        # clear URL params so this block doesn't re-run repeatedly
+        st.experimental_set_query_params()
+    except Exception as e:
+        st.error(f"OAuth exchange failed: {e}")
+        logger.error("OAuth finish error", exc_info=True)
+
+# 2) If user clicks Connect, start the auth flow (or reuse saved creds if present)
+if st.button("🔐 Connect via Google Login", key="oauth_connect"):
+    try:
+        # If a user already completed auth in this session, reuse it
+        if st.session_state.get("oauth_user_email"):
+            st.success(f"Using saved credentials for {st.session_state['oauth_user_email']}")
         else:
-            sheet_id = match.group(1)
+            if not APP_BASE_URL:
+                st.error("APP_BASE_URL not configured. Set APP_BASE_URL environment variable to your app URL.")
+                st.stop()
+            auth_url, state = create_auth_url(APP_BASE_URL)
+            st.markdown(f"[Sign in with Google]({auth_url})", unsafe_allow_html=True)
+            st.info("A Google window will open. After granting access, you'll be redirected back to this app.")
+            # Stop execution so user can use the link and be redirected back
+            st.stop()
+    except Exception as e:
+        st.error(f"Google auth setup error: {e}")
+        logger.error("Google auth error", exc_info=True)
+        st.stop()
 
-            # 1) Get first worksheet name dynamically
-            meta = service.spreadsheets().get(
-                spreadsheetId=sheet_id,
-                fields="sheets(properties(title))"
-            ).execute()
-            first_sheet = meta["sheets"][0]["properties"]["title"]
+# 3) If we have a signed-in user, use saved creds to fetch the sheet (same logic you had)
+if st.session_state.get("oauth_user_email"):
+    try:
+        # load service using saved credentials
+        service = get_service_for_email(st.session_state["oauth_user_email"])
 
-            # 2) Fetch all values from that sheet
-            result = service.spreadsheets().values().get(
-                spreadsheetId=sheet_id,
-                range=f"'{first_sheet}'"
-            ).execute()
-            rows = result.get("values", [])
-
-            if not rows:
-                st.error("❌ No data found in sheet")
+        # If user provided a sheet URL, fetch it immediately (same flow as before)
+        if oauth_url:
+            match = re.search(r"/spreadsheets/d/([a-zA-Z0-9-_]+)", oauth_url)
+            if not match:
+                st.error("❌ Invalid Google Sheet URL")
             else:
-                df = pd.DataFrame(rows[1:], columns=rows[0])
-                st.session_state.data = df
-                st.session_state.sheet_url = oauth_url
-                st.success(f"✅ OAuth connected! {len(df)} rows loaded.")
+                sheet_id = match.group(1)
+                # 1) Get first worksheet name dynamically
+                meta = service.spreadsheets().get(
+                    spreadsheetId=sheet_id,
+                    fields="sheets(properties(title))"
+                ).execute()
+                first_sheet = meta["sheets"][0]["properties"]["title"]
+
+                # 2) Fetch all values from that sheet
+                result = service.spreadsheets().values().get(
+                    spreadsheetId=sheet_id,
+                    range=f"'{first_sheet}'"
+                ).execute()
+                rows = result.get("values", [])
+
+                if not rows:
+                    st.error("❌ No data found in sheet")
+                else:
+                    df = pd.DataFrame(rows[1:], columns=rows[0])
+                    st.session_state.data = df
+                    st.session_state.sheet_url = oauth_url
+                    st.success(f"✅ OAuth connected! {len(df)} rows loaded.")
+    except FileNotFoundError:
+        st.warning("Credentials not found for this user. Please click Connect and sign in.")
+    except Exception as e:
+        st.error(f"Failed to load sheet: {e}")
+        logger.error("Sheet fetch error", exc_info=True)
+# ——————————————————————
+
 
     # ——————————————————————
 
