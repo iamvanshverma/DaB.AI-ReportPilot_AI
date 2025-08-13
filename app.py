@@ -114,24 +114,34 @@ with tab1:
     # ————— New OAuth flow —————
     with st.expander("🔓 Login with Google (OAuth) to fetch private sheet", expanded=False):
          oauth_url = st.text_input("Google Sheet URL", placeholder="https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit")
-    if st.button("🔐 Connect via Google Login", key="oauth_connect"):
-        from google_auth import get_gsheet_service
-        service = get_gsheet_service()
+# new OAuth connect flow - replace previous block
+from google_auth import get_credentials_and_auth_url
+from googleapiclient.discovery import build
 
+# read query params (Streamlit will show code when Google redirects back)
+qp = st.experimental_get_query_params()
+creds, auth_url = get_credentials_and_auth_url(qp)
+
+if auth_url:
+    st.info("Click the link below to authorize this app to read your Google Sheet (one-time).")
+    st.markdown(f"[Authorize Google Sheets]({auth_url}){{:target='_blank'}}", unsafe_allow_html=True)
+    st.caption("After authorizing, Google will redirect you back to this page and the app will automatically pick up the token.")
+else:
+    # creds available -> build service and fetch sheet
+    try:
+        service = build('sheets', 'v4', credentials=creds)
         match = re.search(r"/spreadsheets/d/([a-zA-Z0-9-_]+)", oauth_url)
         if not match:
             st.error("❌ Invalid Google Sheet URL")
         else:
             sheet_id = match.group(1)
 
-            # 1) Get first worksheet name dynamically
             meta = service.spreadsheets().get(
                 spreadsheetId=sheet_id,
                 fields="sheets(properties(title))"
             ).execute()
             first_sheet = meta["sheets"][0]["properties"]["title"]
 
-            # 2) Fetch all values from that sheet
             result = service.spreadsheets().values().get(
                 spreadsheetId=sheet_id,
                 range=f"'{first_sheet}'"
@@ -145,6 +155,10 @@ with tab1:
                 st.session_state.data = df
                 st.session_state.sheet_url = oauth_url
                 st.success(f"✅ OAuth connected! {len(df)} rows loaded.")
+    except Exception as e:
+        st.error(f"Google Sheets fetch failed: {e}")
+        logger.exception("Google Sheets fetch failed")
+
 
     # ——————————————————————
 
