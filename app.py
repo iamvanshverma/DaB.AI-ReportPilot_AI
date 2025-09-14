@@ -218,9 +218,7 @@ else:
 
 # Tab 2: Send Report
 with tab2:
-    st.write("🔑 RESEND_API_KEY:", os.getenv("RESEND_API_KEY"))
-    st.write("✉️ RESEND_FROM_EMAIL:", os.getenv("RESEND_FROM_EMAIL"))
-    st.write("👤 RESEND_FROM_NAME:", os.getenv("RESEND_FROM_NAME"))
+
     st.header("📧 Send Analysis Report")
     
     if st.session_state.data is None:
