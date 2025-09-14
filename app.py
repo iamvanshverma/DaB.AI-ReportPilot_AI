@@ -102,14 +102,21 @@ with tab1:
     st.header("Connect Google Sheets")
     
     col1, col2 = st.columns([1, 2])
-    
-    with col1:
-        st.markdown("### 🔐 Step 1: Your Google Spreadsheet URL")
         
-    
-    with col2:
-        st.markdown("### 📄 Step 2: Allow us to fetch data")
+    with col1:
+        st.markdown("""
+    ### 🚀 Steps to Authorize & Fetch Your Google Sheet
 
+    1. Click on the **'Authorise Google Sheet'** button below.  
+    2. Choose the **Google Account** that has your sheet.  
+    3. On the warning page → **Google hasn’t verified this app**:  
+        - Click **Advanced**.  
+        - Then click **Go to dab-ai-automailreporting.onrender.com (unsafe)**.  
+    4. Google will show a prompt: **Dab-ai-automailreporting wants to access your Google Account** → Click **Continue**.  
+    5. You will be redirected back to this app automatically.  
+    6. Enter the **Google Sheet URL** in the input box.  
+    7. Click on **Fetch Data** → Your sheet will appear below 🎉.  
+    """)
     
     # ————— New OAuth flow —————
     with st.expander("🔓 Login with Google (OAuth) to fetch private sheet", expanded=False):
