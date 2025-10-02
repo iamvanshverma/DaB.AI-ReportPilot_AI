@@ -9,7 +9,7 @@ load_dotenv()
 class AIAnalyzer:
     def __init__(self):
         genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
-        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        self.model = genai.GenerativeModel('gemini-2.5-flash')
     
     def analyze_data_comprehensive(self, data: pd.DataFrame, language: str = 'en') -> str:
         """Generate comprehensive AI analysis in specified language"""
