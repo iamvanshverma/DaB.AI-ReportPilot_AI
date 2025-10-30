@@ -1,11 +1,24 @@
 # 🚀 DaB.AI - ReportPilot: Automated AI-Powered Data Reporting
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![Gemini API](https://img.shields.io/badge/Powered%20By-Gemini%20AI-blue?style=for-the-badge&logo=google)](https://ai.google.dev/models/gemini)
-[![Render](https://img.shields.io/badge/Deployed%20on-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://render.com/)
+[![Gemini AI](https://img.shields.io/badge/Powered%20By-Gemini%20AI-6D43B7?style=for-the-badge&logo=google&logoColor=4285F4)](https://ai.google.dev/models/gemini)
+[![Streamlit](https://img.shields.io/badge/Deployed%20On-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Python](https://img.shields.io/badge/Language-Python-306998?style=for-the-badge&logo=python&logoColor=FFD43B)](https://www.python.org/)
+[![Pandas](https://img.shields.io/badge/Data%20Handling-Pandas-1976D2?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![NumPy](https://img.shields.io/badge/Numerical%20Ops-NumPy-17A2B8?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Plotly](https://img.shields.io/badge/Visualization-Plotly-2C3E50?style=for-the-badge&logo=plotly&logoColor=2196F3)](https://plotly.com/)
+[![Matplotlib](https://img.shields.io/badge/Visualization-Matplotlib-53822C?style=for-the-badge&logo=matplotlib&logoColor=white)](https://matplotlib.org/)
+[![Data Analysis](https://img.shields.io/badge/Data%20Analysis-EDA%20%26%20Reporting-brightgreen?style=for-the-badge&logo=tableau)](https://pandas.pydata.org/)
+[![Automation](https://img.shields.io/badge/Automation-SendGrid%20%7C%20Render-orange?style=for-the-badge&logo=mailchimp)](https://render.com/)
 
 **ReportPilot** is a sophisticated **AI-powered data analytics tool** built using **Streamlit** and the **Gemini API**. It automates the end-to-end process of generating rich, actionable business reports directly from a user's Google Sheets URL, complete with multilingual support and automated delivery.
+
+---
+
+## 🖼️ Welcome to DaB.AI ReportPilot!
+
+**Welcome Page (Click to launch the app)**
+
+[![Welcome Page](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Welcome%20Page.png)](https://dab-ai-automailreporting.onrender.com)
 
 ---
 
@@ -19,6 +32,73 @@
 | **Multilingual Reporting** | Utilizes Gemini's advanced capabilities to generate the full report in multiple languages, including **English, Spanish, French, German, Portuguese, Hindi, Chinese, and Japanese**. | **Global Utility** |
 | **Automated Delivery Pipeline** | Configure scheduled reports (Daily/Weekly) which auto-refresh data from the source sheet and deliver a professional, consolidated **PDF report** via **SendGrid**. | **Reliable Automation** |
 | **Job Management** | Dedicated section to view, monitor, and manage the status and history of all scheduled report jobs. | **Operational Control** |
+
+---
+
+## 📊 Data Analysis Flow
+
+### 1. Data Ingestion & Preview
+
+After successfully connecting your Google Sheet via OAuth 2.0.
+
+![Data Fetched from GSheet URL](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Data%20Fetched%20Froom%20GSheet%20URL.png)
+
+### 2. Comprehensive AI Analysis (Powered by Gemini)
+
+The application breaks down the analysis into actionable, business-focused sections:
+
+| AI Insight | Visual |
+| :--- | :--- |
+| **AI Insights** (Executive Summary & Key Insights) | ![AI Insights](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/AI%20Insights.png) |
+| **Data Quality Assessment** | ![Data Quality Asssesment](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Data%20Quality%20Asssesment.png) |
+| **Statistical Highlights** | ![Statistical Highlights](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Statistical%20Highlights%20.png) |
+| **Business Recommendations** | ![Recommendations](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Recommendations.png) |
+| **Suggested Further Analysis** | ![Suggested Further Analysis](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Suggested%20Further%20Analysis.png) |
+| **Auto-Generated Visualizations** | ![Auto Generated Visualisation Example](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Auto%20Generated%20Visualisation%20Example%20.png) |
+
+---
+
+## 📧 Automated Delivery Pipeline
+
+### 1. Send Report Portal
+
+The portal allows for immediate or scheduled delivery with language selection and content options.
+
+![Send Report PDF Directly to your EMail Portal](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Send%20Report%20PDF%20Directly%20%20to%20your%20EMail%20Portal.png)
+
+**Multilingual Report Selection**
+
+![Send Report Directly to Email language Select](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Send%20Report%20Directly%20to%20Email%20language%20Select.png)
+
+### 2. Report Scheduling
+
+Configure recurring reports to auto-refresh data and deliver reports at set intervals.
+
+![Daily-Weekly Report Scheduling Portal](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Daily-Weekly%20Report%20Scheduling%20Portal.png)
+
+### 3. Email Output
+
+The final professional delivery via SendGrid.
+
+| Email in Inbox | Email Body |
+| :--- | :--- |
+| ![Emailed Report in Inbox](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20report%20in%20Inbox.png) | ![EMailed Report Body](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/EMailed%20Report%20Body.png) |
+
+### 4. Consolidated PDF Report View (Optimized for Visibility)
+
+The final output—a consolidated PDF report containing all analysis and charts.
+
+#### Page Flow (Part 1 of 2)
+
+| Page 1 | Page 2 | Page 3 | Page 4 |
+| :---: | :---: | :---: | :---: |
+| ![PDF First Page](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20First%20Page.png) | ![PDF Page 2](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20Page%202.png) | ![PDF Page 3](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20Page%203.png) | ![PDF Page 4](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20Page%204.png) |
+
+#### Page Flow (Part 2 of 2)
+
+| Page 5 | Page 6 | Page 7 (Last) |
+| :---: | :---: | :---: |
+| ![PDF Page 5](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20Page%205.png) | ![PDF Page 6](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20Page%206.png) | ![PDF Last Page](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20LAst%20Page%20.png) |
 
 ---
 
