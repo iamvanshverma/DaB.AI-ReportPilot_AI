@@ -1,16 +1,17 @@
 # 🚀 DaB.AI - ReportPilot: Automated AI-Powered Data Reporting
 
 [![Gemini AI](https://img.shields.io/badge/Powered%20By-Gemini%20AI-6D43B7?style=for-the-badge&logo=google&logoColor=4285F4)](https://ai.google.dev/models/gemini)
-[![Streamlit](https://img.shields.io/badge/Deployed%20On-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![Python](https://img.shields.io/badge/Language-Python-306998?style=for-the-badge&logo=python&logoColor=FFD43B)](https://www.python.org/)
 [![Pandas](https://img.shields.io/badge/Data%20Handling-Pandas-1976D2?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![NumPy](https://img.shields.io/badge/Numerical%20Ops-NumPy-17A2B8?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
 [![Plotly](https://img.shields.io/badge/Visualization-Plotly-2C3E50?style=for-the-badge&logo=plotly&logoColor=2196F3)](https://plotly.com/)
 [![Matplotlib](https://img.shields.io/badge/Visualization-Matplotlib-53822C?style=for-the-badge&logo=matplotlib&logoColor=white)](https://matplotlib.org/)
-[![Data Analysis](https://img.shields.io/badge/Data%20Analysis-EDA%20%26%20Reporting-brightgreen?style=for-the-badge&logo=tableau)](https://pandas.pydata.org/)
-[![Automation](https://img.shields.io/badge/Automation-SendGrid%20%7C%20Render-orange?style=for-the-badge&logo=mailchimp)](https://render.com/)
+[![Data Analysis](https://img.shields.io/badge/Data%20Analysis-BI%20%26%20Reporting-brightgreen?style=for-the-badge&logo=tableau)](https://github.com/iamvanshverma/automation_email3)
+[![Email Delivery](https://img.shields.io/badge/Automation-SendGrid-000000?style=for-the-badge&logo=sendgrid)](https://sendgrid.com/)
+[![Deployed On](https://img.shields.io/badge/Deployed%20On-Render-46E3B7?style=for-the-badge&logo=render)](https://render.com/)
 
-**ReportPilot** is a sophisticated **AI-powered data analytics tool** built using **Streamlit** and the **Gemini API**. It automates the end-to-end process of generating rich, actionable business reports directly from a user's Google Sheets URL, complete with multilingual support and automated delivery.
+**DaB.AI: ReportPilot** is a sophisticated **full-stack AI-Powered Business Intelligence (BI) application** built primarily with **Python** using the **Streamlit framework**. It securely integrates with **Google Sheets via OAuth 2.0** and leverages the **Gemini API** to fully automate the end-to-end process of generating rich, actionable, and **multilingual PDF reports** with optional immediate or scheduled email delivery via SendGrid.
 
 ---
 
@@ -54,7 +55,7 @@ The application breaks down the analysis into actionable, business-focused secti
 | **Statistical Highlights** | ![Statistical Highlights](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Statistical%20Highlights%20.png) |
 | **Business Recommendations** | ![Recommendations](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Recommendations.png) |
 | **Suggested Further Analysis** | ![Suggested Further Analysis](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Suggested%20Further%20Analysis.png) |
-| **Auto-Generated Visualizations** | **(CORRECTED LINK)**: ![Automated Visualization Chart Example](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Automated%20Visualization%20Chart%20Example.png) |
+| **Auto-Generated Visualizations** | ![Automated Visualization Chart Example](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Automated%20Visualization%20Chart%20Example.png) |
 
 ---
 
