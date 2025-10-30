@@ -1,4 +1,4 @@
-# 🚀 DaB.AI - ReportPilot: Automated AI-Powered Data Reporting
+#  DaB.AI - ReportPilot: Automated AI-Powered Data Reporting
 
 [![Gemini AI](https://img.shields.io/badge/Powered%20By-Gemini%20AI-6D43B7?style=for-the-badge&logo=google&logoColor=4285F4)](https://ai.google.dev/models/gemini)
 [![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
@@ -165,3 +165,4 @@ This project was built with dedication and skill by **Vansh Verma**.
 | **Live Application** | [https://dab-ai-automailreporting.onrender.com] |
 | **Source Code** | [https://github.com/iamvanshverma/automation_email3] |
 | **Contact** | `vanshverma2015@gmail.com` |
+
