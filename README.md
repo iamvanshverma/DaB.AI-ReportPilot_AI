@@ -88,13 +88,25 @@ The final professional delivery via SendGrid.
 
 The final output—a consolidated PDF report containing all analysis and charts.
 
-| Page 1 | Page 2 | Page 3 |
-| :---: | :---: | :---: |
-| ![PDF First Page](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20First%20Page.png) | ![PDF Page 2](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20Page%202.png) | ![PDF Page 3](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20Page%203.png) |
+#### Page Flow (Part 1 of 4)
 
-| Page 4 | Page 5 | Page 6 |
-| :---: | :---: | :---: |
-| ![PDF Page 4](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20Page%204.png) | ![PDF Page 5](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20Page%205.png) | ![PDF Page 6](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20Page%206.png) |
+| Page 1 | Page 2 |
+| :---: | :---: |
+| ![PDF First Page](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20First%20Page.png) | ![PDF Page 2](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20Page%202.png) |
+
+#### Page Flow (Part 2 of 4)
+
+| Page 3 | Page 4 |
+| :---: | :---: |
+| ![PDF Page 3](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20Page%203.png) | ![PDF Page 4](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20Page%204.png) |
+
+#### Page Flow (Part 3 of 4)
+
+| Page 5 | Page 6 |
+| :---: | :---: |
+| ![PDF Page 5](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20Page%205.png) | ![PDF Page 6](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Emailed%20Report%20PDF%20Page%206.png) |
+
+#### Page Flow (Part 4 of 4)
 
 | Page 7 (Last) |
 | :---: |
