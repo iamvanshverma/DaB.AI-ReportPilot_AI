@@ -54,7 +54,7 @@ The application breaks down the analysis into actionable, business-focused secti
 | **Statistical Highlights** | ![Statistical Highlights](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Statistical%20Highlights%20.png) |
 | **Business Recommendations** | ![Recommendations](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Recommendations.png) |
 | **Suggested Further Analysis** | ![Suggested Further Analysis](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Suggested%20Further%20Analysis.png) |
-| **Auto-Generated Visualizations** | **(UPDATED)**: ![Auto Generated Visualisation Example](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Auto%20Generated%20Visualisation%20Example%20.png) |
+| **Auto-Generated Visualizations** | ![Auto Generated Visualisation Example](https://github.com/iamvanshverma/automation_email3/blob/main/DaB.AI%20ReportPilot%20Images/Automated%20Visualization%20Chart%20Example%20.png) |
 
 ---
 
@@ -160,3 +160,4 @@ This project was built with dedication and skill by **Vansh Verma**.
 | **Live Application** | [https://dab-ai-automailreporting.onrender.com] |
 | **Source Code** | [https://github.com/iamvanshverma/automation_email3] |
 | **Contact** | `vanshverma2015@gmail.com` |
+
