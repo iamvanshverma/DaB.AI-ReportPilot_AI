@@ -167,9 +167,9 @@ This project was built with dedication and skill by **Vansh Verma**.
 | Connect | Links |
 | :--- | :--- |
 | **Live Application** | [https://dab-ai-automailreporting.onrender.com] |
-| **Source Code** | [https://github.com/iamvanshverma/automation_email3] |
+| **Source Code** | [https://github.com/iamvanshverma/DaB.AI-ReportPilot_AI.git] |
 | **Contact** | `vanshverma2015@gmail.com` |
-
+| **Linkedin** | [https://www.linkedin.com/in/ivanshverma] |
 
 
 
