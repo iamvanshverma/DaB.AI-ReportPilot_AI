@@ -19,7 +19,15 @@
 
 ---
 
-## 🖼️ Welcome to DaB.AI ReportPilot!
+## 🔗 Quick Access & Visual Preview
+
+| Tool | Primary Use Case | Live Demo | Repository |
+| :--- | :--- | :---: | :---: |
+| **DaB.AI - ReportPilot AI** | Automated Multilingual Report Generation (Google Sheets) | **[Live Application](https://dab-ai-automailreporting.onrender.com)** | **[Source Code](https://github.com/iamvanshverma/DaB.AI-ReportPilot_AI.git)** |
+
+---
+
+## Welcome to DaB.AI ReportPilot!
 
 **Welcome Page (Click to launch the app)**
 
@@ -170,6 +178,7 @@ This project was built with dedication and skill by **Vansh Verma**.
 | **Source Code** | [https://github.com/iamvanshverma/DaB.AI-ReportPilot_AI.git] |
 | **Contact** | `vanshverma2015@gmail.com` |
 | **Linkedin** | [https://www.linkedin.com/in/ivanshverma] |
+
 
 
 
