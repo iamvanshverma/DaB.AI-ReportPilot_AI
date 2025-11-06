@@ -15,7 +15,7 @@
 > 
 > ReportPilot intelligently handles your entire reporting workflow by fetching live Google Sheets data, analyzing it, generating insightful AI reports, and delivering them automatically on schedule. Designed for speed, accuracy, and ease of use, it eliminates repetitive manual effort and ensures that your growing data is continuously analyzed, visualized, and shared without intervention.  
 > 
-> Whether for business reviews, performance tracking, or strategic planning, **DaB.AI: ReportPilot** empowers teams to stay informed and make quick, data-driven decisions with zero setup and maximum reliability.
+> Whether for business reviews, performance tracking, or strategic planning, **DaB.AI: ReportPilot** empowers teams to stay informed and make quick,** data-driven decisions** with zero setup and maximum reliability.
 > 
 ---
 
@@ -178,6 +178,7 @@ This project was built with dedication and skill by **Vansh Verma**.
 | **Source Code** | [https://github.com/iamvanshverma/DaB.AI-ReportPilot_AI.git] |
 | **Contact** | `vanshverma2015@gmail.com` |
 | **Linkedin** | [https://www.linkedin.com/in/ivanshverma] |
+
 
 
 
